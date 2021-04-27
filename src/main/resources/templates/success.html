@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Payment Success</title>
+</head>
+<body>
+	<h1>Payment Successful</h1>
+	<br><br>
+	<h2>Transaction Details </h2>
+	
+	<form action="/success.html">
+	  		
+  		<button type="button" th:onclick="|window.location.href='/payment-details/${detail.getPayment().getId()}'|"> View Detail</button>
+  	
+  	</form>
+  		
+ </body>
+ </html>	

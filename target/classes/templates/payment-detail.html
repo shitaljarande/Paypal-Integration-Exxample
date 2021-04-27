@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+h2 {
+  position: center;
+  left: 100px;
+  top: 150px;
+}
+
+body {
+	 position: center;
+  	 left: 150px;
+ 	 top: 250px;
+	
+}
+</style>
+<title>Payment Success</title>
+</head>
+<body>
+	<!--<h1>Payment Info</h1>-->
+	<h2>Transaction Details :</h2>
+	
+	<form action="/payment-detail.html" >  		
+  		
+  		<label for="paymentId">Payment ID:  [[${value.paymentId}]]</label> 
+  		<br><br>
+  		
+  		<label for="amount">Amount:  [[${value.amount}]]</label>
+  		<br><br>
+  		
+  		<label for="currency">Currency:  [[${value.currency}]]</label>
+  		<br><br>
+  		
+  		<label for="paymentType">Payment Type:  [[${value.paymentType}]]</label>
+  		<br><br>
+  		
+  		<label for="paymentState">Payment State:  [[${value.paymentState}]]</label>
+  		<br><br>
+  		
+  		<label for="payerName">Payer Name:  [[${value.payerName}]]</label>
+  		<br><br>
+  		
+  		<label for="payerEmail">Payer Email: [[${value.getPayerEmail()}]]</label>
+  		<br><br>
+  		
+  		<label for="payerId">Payer ID:    [[${value.getPayerId()}]]</label>
+  		<br><br>
+  		
+  		<label for="payerShippingAddress">Payer Shipping Address: [[${value.getPayerShippingAddress()}]]</label>
+  		<br><br>
+  		
+  		<label for="payerDateTime">Payment Date & Time: [[${#temporals.format(value.paymentDateTime, 'dd/MM/yyyy hh:mm a')}]]</label>
+  		<br><br>
+  		
+  		
+  		
+  	</form>
+  		
+ </body>
+ </html>	
